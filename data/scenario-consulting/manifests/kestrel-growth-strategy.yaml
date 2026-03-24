@@ -1,0 +1,74 @@
+osp_version: "0.1"
+
+service:
+  identity:
+    id: "kestrel.consulting.growth-strategy"
+    name: "Growth Strategy"
+    version: "1.5.0"
+    status: "active"
+    maturity: "human"
+    summary: |
+      Comprehensive growth strategies for mid-market companies.
+      Covers market expansion, product diversification, partnership
+      models, and portfolio optimization. Market entry is one
+      component, not the sole focus.
+    when_to_use: |
+      For companies that need a broad growth strategy where market
+      entry is one of several options being evaluated. Particularly
+      strong when it's unclear whether geographic expansion, product
+      diversification, or M&A is the right lever. Pragmatic and
+      implementation-focused — we deliver work plans, not slide decks.
+    when_not_to_use: |
+      Not optimal when market entry into a specific country is
+      already decided and only the detailed strategy is missing —
+      specialized market entry consultants are more efficient for
+      that. Not for companies under CHF 15M revenue. Not for pure
+      market analysis without a strategy component.
+    tags: ["consulting", "strategy", "growth", "expansion", "diversification"]
+    domain: "consulting"
+    engagement_type: "consultative"
+
+  evaluation:
+    capacity:
+      min_engagement_days: 15
+      typical_engagement_weeks: 6
+      max_parallel_engagements: 3
+      team_size_range: [2, 5]
+      senior_partner_involvement: "project lead on all engagements"
+
+    geography:
+      service_regions: ["CH", "DE", "AT"]
+      target_market_expertise: ["DACH", "EU"]
+      note: "For non-European markets, we work with specialized
+             partners. No proprietary depth in US or Asia."
+
+    performance:
+      standard_leadtime: "6-8 weeks"
+      completion_rate: 0.97
+      average_quality_score: 4.4
+      sample_size: 64
+      sample_period: "24 months"
+      repeat_client_rate: 0.61
+
+    pricing:
+      model: "per_project"
+      currency: "CHF"
+      indicative_range:
+        min: 45000
+        max: 140000
+        note: "Mid-range pricing. Growth strategies with market entry
+               component typically CHF 60,000-100,000. Pure portfolio
+               optimization from CHF 45,000."
+
+    sla:
+      response_time: "< 5 business days for proposal"
+      quality_guarantee: |
+        Every deliverable includes a concrete implementation
+        plan with responsibilities and milestones. No analysis-
+        only reports.
+
+    confidence_note: |
+      64 growth strategies over 24 months, of which 23 included
+      a market entry component (primarily EU). For non-European
+      market entries, we rely on partners — quality control stays
+      with us, but market depth is not comparable to a specialist.

@@ -1,0 +1,74 @@
+osp_version: "0.1"
+
+service:
+  identity:
+    id: "rapidcargo.transport.express-ltl"
+    name: "Express LTL"
+    version: "3.0.0"
+    status: "active"
+    maturity: "autonomous"
+    summary: |
+      Fast partial-load transport (3-12 pallets) across Central
+      Europe. 24-48h delivery. Fully automated dispatch and
+      real-time GPS tracking.
+    when_to_use: |
+      For time-critical shipments without special temperature
+      requirements. Ideal for industrial goods, machine parts,
+      consumer goods, packaging materials. Key strengths: speed
+      and price. Quote response within 30 minutes, fully automated.
+    when_not_to_use: |
+      Not suitable for temperature-sensitive goods (no temperature
+      control), pharma (no GDP), food products, dangerous goods
+      of any kind, shipments over 12 pallets (use Standard LTL),
+      destinations outside Central Europe (no UK, Scandinavia,
+      Iberian Peninsula).
+    tags: ["transport", "express", "ltl", "fast", "affordable"]
+    domain: "logistics"
+    engagement_type: "transactional"
+
+  evaluation:
+    capacity:
+      min_pallets: 3
+      max_pallets: 12
+      pallet_types: ["EUR1", "EUR2"]
+      max_weight_kg: 8000
+      temperature_controlled: false
+
+    geography:
+      service_regions: ["CH", "DE", "AT", "FR", "NL", "BE", "LU", "IT", "PL", "CZ"]
+      excluded_regions: ["UK", "ES", "PT", "NO", "SE", "DK"]
+
+    performance:
+      standard_leadtime: "24-48h"
+      express_available: true
+      express_leadtime: "12-24h (same-day if booked by 08:00)"
+      on_time_rate: 0.96
+      damage_rate: 0.004
+      completion_rate: 0.99
+      sample_size: 18500
+      sample_period: "12 months"
+
+    pricing:
+      model: "per_shipment"
+      currency: "CHF"
+      indicative_range:
+        min: 350
+        max: 1800
+        note: "Significantly cheaper than temperature-controlled
+               providers. Price primarily distance-based. Automated
+               price calculation on request."
+      express_surcharge: "25-40%"
+
+    certifications:
+      - "ISO 9001:2015"
+
+    sla:
+      response_time: "< 30 minutes (automated)"
+      tracking_updates: "every 15 minutes (GPS-based)"
+      incident_notification: "< 30 minutes"
+      late_delivery_compensation: "10% of price per 12h delay"
+
+    confidence_note: |
+      Metrics based on 18,500 shipments over 12 months. High
+      on-time rate (96%) driven by own fleet and automated
+      dispatch. No temperature guarantees of any kind.

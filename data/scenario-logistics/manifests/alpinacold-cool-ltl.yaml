@@ -1,0 +1,88 @@
+osp_version: "0.1"
+
+service:
+  identity:
+    id: "alpinacold.transport.cool-ltl"
+    name: "Cool Chain LTL Switzerland"
+    version: "1.2.0"
+    status: "active"
+    maturity: "assisted"
+    summary: |
+      Temperature-controlled partial loads (1-10 pallets) within
+      Switzerland. Next-day delivery between all major cities.
+      GDP and Swissmedic-compliant documentation. Own refrigerated
+      fleet with dual-sensor monitoring.
+    when_to_use: |
+      For temperature-sensitive shipments within Switzerland.
+      Particularly strong in pharma and diagnostics thanks to
+      Swissmedic compliance. Accepts shipments from 1 pallet.
+      Daily routes Basel-Zurich-Bern-Geneva-Lugano. Ideal as
+      last-mile complement to international carriers.
+    when_not_to_use: |
+      No international transport — Switzerland only. Not suitable
+      for non-temperature-controlled shipments (not our setup).
+      Not for shipments over 10 pallets. Not for frozen goods
+      (separate service).
+    tags: ["transport", "temperature", "pharma", "switzerland", "cool-chain"]
+    domain: "logistics"
+    engagement_type: "transactional"
+
+  evaluation:
+    capacity:
+      min_pallets: 1
+      max_pallets: 10
+      pallet_types: ["EUR1", "EUR2", "SBB"]
+      max_weight_kg: 6000
+      temperature_controlled: true
+      temperature_range_celsius: [2, 25]
+      temperature_precision: "+/- 0.3°C"
+      temperature_monitoring: "continuous, dual-sensor, Swissmedic-validated"
+
+    geography:
+      service_regions: ["CH"]
+      excluded_regions: ["all international"]
+      daily_routes:
+        - "Basel - Zurich - Winterthur"
+        - "Basel - Bern - Lausanne - Geneva"
+        - "Zurich - Lucerne - Lugano"
+
+    performance:
+      standard_leadtime: "next business day"
+      express_available: true
+      express_leadtime: "same-day (order by 10:00)"
+      on_time_rate: 0.98
+      damage_rate: 0.001
+      completion_rate: 0.99
+      temperature_deviation_rate: 0.001
+      sample_size: 8400
+      sample_period: "12 months"
+
+    pricing:
+      model: "per_shipment"
+      currency: "CHF"
+      indicative_range:
+        min: 250
+        max: 1200
+        note: "Competitive for domestic shipments due to own fleet
+               and daily routes. Price depends on route, pallet
+               count, and urgency."
+      express_surcharge: "50%"
+
+    certifications:
+      - "GDP (Good Distribution Practice)"
+      - "Swissmedic GMP Compliance"
+      - "ISO 9001:2015"
+      - "HACCP"
+
+    sla:
+      response_time: "< 1h"
+      tracking_updates: "every 15 minutes"
+      incident_notification: "< 10 minutes"
+      late_delivery_compensation: "20% of price per 12h delay"
+      temperature_breach_compensation: "Full refund on temperature deviation > 1°C"
+
+    confidence_note: |
+      Metrics based on 8,400 shipments over 12 months,
+      exclusively within Switzerland. Temperature deviation
+      rate of 0.1% is industry-leading, enabled by dual-sensor
+      monitoring and own fleet.

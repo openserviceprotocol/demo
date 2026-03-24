@@ -1,0 +1,74 @@
+osp_version: "0.1"
+
+service:
+  identity:
+    id: "strategyworks.consulting.market-entry"
+    name: "Market Entry Strategy"
+    version: "1.0.0"
+    status: "active"
+    maturity: "assisted"
+    summary: |
+      Strategic advisory for entering new geographic markets
+      or customer segments. Covers market analysis, regulatory
+      assessment, partner model evaluation, and go-to-market
+      planning. Particular strength in the US, UK, and APAC.
+    when_to_use: |
+      For companies with CHF 50-500M revenue planning entry into
+      demanding markets (US, UK, Japan, China, Singapore,
+      Australia). Particularly relevant in regulated industries
+      (FDA, CE, CFDA) where market authorization significantly
+      shapes the entry strategy.
+    when_not_to_use: |
+      Not for startups under CHF 5M revenue. Not for pure
+      desk-research projects. Not for markets in Africa or
+      South America (referral to partners possible). Not for
+      intra-EU expansion (other providers are more cost-effective
+      for that).
+    tags: ["consulting", "strategy", "market-entry", "usa", "apac"]
+    domain: "consulting"
+    engagement_type: "consultative"
+
+  evaluation:
+    capacity:
+      min_engagement_days: 15
+      typical_engagement_weeks: 8
+      max_parallel_engagements: 2
+      team_size_range: [2, 4]
+      senior_partner_involvement: "always — leads every engagement"
+
+    geography:
+      service_regions: ["CH", "DE", "AT"]
+      target_market_expertise: ["US", "UK", "JP", "CN", "SG", "AU",
+                                "KR", "IN"]
+
+    performance:
+      standard_leadtime: "6-10 weeks"
+      completion_rate: 0.98
+      average_quality_score: 4.8
+      sample_size: 86
+      sample_period: "36 months"
+      repeat_client_rate: 0.72
+
+    pricing:
+      model: "per_project"
+      currency: "CHF"
+      indicative_range:
+        min: 80000
+        max: 220000
+        note: "Premium pricing reflects senior partner involvement
+               and deep market knowledge. Three-phase model: Phase 1
+               (Market Intelligence) orderable separately from
+               CHF 45,000."
+
+    sla:
+      response_time: "< 5 business days for proposal"
+      quality_guarantee: |
+        One revision round included. Factual errors corrected
+        at no charge. Senior partner personally reviews every
+        deliverable.
+
+    confidence_note: |
+      86 completed market entry projects over 36 months.
+      Repeat client rate of 72% as an indicator of satisfaction.
+      Particularly strong track record in the US (34 projects)
+      and Japan (12 projects).

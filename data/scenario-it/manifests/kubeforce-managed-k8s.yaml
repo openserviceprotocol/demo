@@ -1,0 +1,90 @@
+osp_version: "0.1"
+
+service:
+  identity:
+    id: "kubeforce.infrastructure.managed-k8s"
+    name: "Managed Kubernetes"
+    version: "2.5.0"
+    status: "active"
+    maturity: "supervised"
+    summary: |
+      Fully managed Kubernetes clusters on AWS, Azure, and
+      Google Cloud. Multi-cloud setups possible. Focus on
+      cloud-native workloads. No VM hosting, no managed
+      databases — we do one thing and do it right.
+    when_to_use: |
+      For teams running containerized applications that need a
+      managed Kubernetes platform. The only DACH provider with
+      expertise across all three hyperscalers. Particularly strong
+      for multi-cloud setups (workloads distributed across
+      providers) and teams building a platform engineering culture.
+    when_not_to_use: |
+      Not for classical VM workloads without containerization.
+      Not if managed databases need to be included in the hosting
+      package — we don't operate databases. Not for Windows
+      workloads. Not under 3 nodes — for smaller setups, a managed
+      container service like Fargate is more cost-effective.
+    tags: ["kubernetes", "k8s", "cloud", "aws", "azure", "gcp", "multi-cloud"]
+    domain: "it-services"
+    engagement_type: "continuous"
+
+  evaluation:
+    capacity:
+      cloud_providers: ["aws", "azure", "gcp"]
+      os_support: ["linux-containers"]
+      container_orchestration: ["kubernetes"]
+      managed_databases: []
+      min_nodes: 3
+      max_nodes: 200
+      multi_cloud: true
+      gpu_support: true
+      gpu_types: ["nvidia-a100", "nvidia-t4", "nvidia-l4"]
+
+    geography:
+      service_regions: ["CH", "DE", "AT"]
+      infrastructure_regions: ["eu-central-1", "eu-west-1", "westeurope",
+                               "europe-west1", "europe-west4",
+                               "us-east-1", "us-central1"]
+
+    performance:
+      standard_leadtime: "2-5 days for initial cluster setup"
+      uptime_sla: 0.999
+      patch_cycle: "rolling updates, zero-downtime, critical within 6h"
+      backup_frequency: "etcd snapshots every 6h, 30-day retention"
+      mean_time_to_respond: "< 30 minutes (24/7 production tier)"
+      mean_time_to_resolve: "< 2 hours (P1, cluster-level issues)"
+      sample_size: 85
+      sample_period: "12 months"
+
+    pricing:
+      model: "subscription"
+      currency: "CHF"
+      indicative_range:
+        min: 1500
+        max: 15000
+        note: "Monthly management fee. Development tier (3-5 nodes,
+               business hours): from CHF 1,500. Production tier
+               (10+ nodes, 24/7): from CHF 5,000. Multi-cloud setup:
+               from CHF 8,000. Cloud infrastructure costs are additional."
+
+    certifications:
+      - "Certified Kubernetes Service Provider (CNCF)"
+      - "AWS Container Competency"
+      - "Google Cloud Partner"
+      - "ISO 27001 (in certification, expected Q3 2026)"
+
+    sla:
+      response_time: "< 30 min (production 24/7), < 2h (development business hours)"
+      tracking_available: true
+      incident_notification: "< 10 minutes (automated)"
+      late_delivery_compensation: |
+        99.9% cluster availability. Service credits on breach:
+        10x proportional management fee. Applies to the
+        Kubernetes control plane, not individual workloads.
+
+    confidence_note: |
+      85 managed Kubernetes clusters across 52 clients. GCP
+      expertise is our key differentiator in the DACH market.
+      GPU support available for 6 months, growing demand for
+      ML workloads. ISO 27001 expected Q3 2026 — currently
+      in certification.

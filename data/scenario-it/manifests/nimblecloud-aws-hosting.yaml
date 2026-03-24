@@ -1,0 +1,80 @@
+osp_version: "0.1"
+
+service:
+  identity:
+    id: "nimblecloud.infrastructure.aws-hosting"
+    name: "Managed AWS Hosting"
+    version: "2.0.0"
+    status: "active"
+    maturity: "supervised"
+    summary: |
+      Cost-optimized cloud hosting on AWS. Monitoring runs 24/7
+      automated, human support during business hours. Specialized
+      in Linux workloads and containerization.
+    when_to_use: |
+      For SMEs and startups that need reliable AWS hosting without
+      paying for enterprise overhead. Ideal when the application
+      doesn't require 24/7 human support — automated monitoring
+      detects outages and restarts services autonomously.
+      Particularly good for web apps, APIs, and microservices.
+    when_not_to_use: |
+      Not for workloads requiring guaranteed 24/7 human response
+      (financial trading, emergency systems). Not for Windows
+      Server. Not for Azure or GCP. Not for companies expecting
+      managed databases in the hosting package (we recommend
+      booking AWS RDS directly).
+    tags: ["hosting", "aws", "cloud", "linux", "affordable", "startup"]
+    domain: "it-services"
+    engagement_type: "continuous"
+
+  evaluation:
+    capacity:
+      cloud_providers: ["aws"]
+      os_support: ["ubuntu", "debian", "amazon-linux"]
+      container_orchestration: ["kubernetes", "ecs", "fargate"]
+      managed_databases: []
+      max_managed_instances: 100
+      gpu_support: false
+
+    geography:
+      service_regions: ["CH", "DE", "AT"]
+      infrastructure_regions: ["eu-central-1", "eu-west-1", "us-east-1"]
+
+    performance:
+      standard_leadtime: "4-8h for initial setup"
+      uptime_sla: 0.995
+      patch_cycle: "weekly automated, critical within 12h"
+      backup_frequency: "daily, 14-day retention"
+      mean_time_to_respond: "< 1h (business hours), automated 24/7"
+      mean_time_to_resolve: "< 8 hours (P1, business hours)"
+      sample_size: 520
+      sample_period: "12 months"
+
+    pricing:
+      model: "subscription"
+      currency: "CHF"
+      indicative_range:
+        min: 300
+        max: 5000
+        note: "Monthly. Starting at CHF 300 for 2 instances. Typical
+               SME setup (5-10 instances): CHF 800-2,000. Cloud
+               infrastructure costs are additional, but we actively
+               optimize them (average 30% savings vs. self-managed)."
+
+    certifications:
+      - "AWS Solutions Architect Partner"
+
+    sla:
+      response_time: "< 1h (Mon-Fri 08:00-18:00 CET)"
+      tracking_available: true
+      incident_notification: "< 5 minutes (automated alert)"
+      late_delivery_compensation: |
+        99.5% uptime guarantee. Service credits on breach:
+        5x proportional monthly fee.
+
+    confidence_note: |
+      520 active clients, primarily SMEs and startups. Setup
+      speed (4-8h) significantly faster than enterprise providers
+      due to standardized templates. Business-hours-only human
+      support is a deliberate choice for lower costs — automated
+      monitoring compensates overnight.

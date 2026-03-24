@@ -1,0 +1,84 @@
+osp_version: "0.1"
+
+service:
+  identity:
+    id: "translogistics.transport.ltl"
+    name: "LTL Transport Europe"
+    version: "2.1.0"
+    status: "active"
+    maturity: "supervised"
+    summary: |
+      Partial-load transport (5-15 pallets) across Europe.
+      Temperature-controlled between +2°C and +25°C with
+      continuous real-time monitoring and GDP-compliant
+      documentation.
+    when_to_use: |
+      Ideal for temperature-sensitive goods: pharma, biotech,
+      food, cosmetics. All vehicles equipped with calibrated
+      temperature loggers and GDP-compliant documentation.
+      Also available for non-temperature-critical goods.
+      5-15 Euro pallets.
+    when_not_to_use: |
+      Not suitable for single pallets (under 5), shipments over
+      15 pallets, dangerous goods classes 1/6/7, destinations
+      outside Europe. Not the most cost-effective option for
+      non-critical goods without temperature requirements.
+    tags: ["transport", "ltl", "temperature", "pharma", "gdp", "europe"]
+    domain: "logistics"
+    engagement_type: "transactional"
+
+  evaluation:
+    capacity:
+      min_pallets: 5
+      max_pallets: 15
+      pallet_types: ["EUR1", "EUR2", "industrial"]
+      max_weight_kg: 12000
+      temperature_controlled: true
+      temperature_range_celsius: [2, 25]
+      temperature_precision: "+/- 0.5°C"
+      temperature_monitoring: "continuous, real-time, calibrated loggers"
+
+    geography:
+      service_regions: ["CH", "DE", "AT", "FR", "IT", "NL", "BE", "LU",
+                        "ES", "PT", "UK", "NO", "SE", "DK", "PL", "CZ"]
+      excluded_regions: []
+
+    performance:
+      standard_leadtime: "48-96h"
+      express_available: true
+      express_leadtime: "24-36h"
+      on_time_rate: 0.94
+      damage_rate: 0.002
+      completion_rate: 0.97
+      sample_size: 4200
+      sample_period: "12 months"
+
+    pricing:
+      model: "per_shipment"
+      currency: "CHF"
+      indicative_range:
+        min: 1200
+        max: 4500
+        note: "Premium pricing reflects GDP quality and continuous
+               temperature monitoring. Base price without temperature
+               control from CHF 800."
+      express_surcharge: "40-60%"
+      temperature_surcharge: "20-30%"
+
+    certifications:
+      - "GDP (Good Distribution Practice)"
+      - "ISO 9001:2015"
+      - "AEO (Authorized Economic Operator)"
+      - "HACCP"
+
+    sla:
+      response_time: "< 2h during business hours"
+      tracking_updates: "every 30 minutes"
+      incident_notification: "< 15 minutes"
+      late_delivery_compensation: "15% of base price per 24h delay"
+      temperature_breach_compensation: "50% refund if temperature deviation > 2°C"
+
+    confidence_note: |
+      Metrics based on 4,200 shipments over 12 months.
+      Temperature deviation rate is 0.3% of all temperature-
+      controlled shipments.

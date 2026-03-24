@@ -1,0 +1,24 @@
+# Environment
+.env
+.env.local
+
+# Dependencies
+node_modules/
+.pnp/
+
+# Build
+.next/
+out/
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log

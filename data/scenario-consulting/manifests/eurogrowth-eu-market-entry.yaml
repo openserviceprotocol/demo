@@ -1,0 +1,75 @@
+osp_version: "0.1"
+
+service:
+  identity:
+    id: "eurogrowth.consulting.eu-market-entry"
+    name: "EU Market Entry"
+    version: "2.0.0"
+    status: "active"
+    maturity: "assisted"
+    summary: |
+      Data-driven market entry strategy for European target
+      markets. Combines quantitative market modeling with a
+      network of local partners in 18 EU countries. Faster
+      turnaround than traditional strategy consulting.
+    when_to_use: |
+      For DACH companies with CHF 10-300M revenue expanding
+      within Europe. Particularly strong in Northern Europe
+      (Scandinavia, UK, Benelux) and Eastern Europe (Poland,
+      Czech Republic, Romania). Data-driven approach with
+      proprietary market model for faster results.
+    when_not_to_use: |
+      Not for target markets outside Europe (no US, no Asia).
+      Not suitable when regulatory complexity is the primary
+      driver (FDA, CFDA) — use a market-specific specialist
+      instead. Not for companies under CHF 10M revenue.
+    tags: ["consulting", "strategy", "market-entry", "europe", "data-driven"]
+    domain: "consulting"
+    engagement_type: "consultative"
+
+  evaluation:
+    capacity:
+      min_engagement_days: 10
+      typical_engagement_weeks: 4
+      max_parallel_engagements: 4
+      team_size_range: [2, 3]
+      senior_partner_involvement: "kickoff and final review"
+
+    geography:
+      service_regions: ["CH", "DE", "AT"]
+      target_market_expertise: ["UK", "FR", "IT", "ES", "PT", "NL",
+                                "BE", "SE", "NO", "DK", "FI", "PL",
+                                "CZ", "RO", "HU", "IE", "AT", "DE"]
+
+    performance:
+      standard_leadtime: "3-5 weeks"
+      completion_rate: 0.99
+      average_quality_score: 4.5
+      sample_size: 142
+      sample_period: "24 months"
+      repeat_client_rate: 0.58
+
+    pricing:
+      model: "per_project"
+      currency: "CHF"
+      indicative_range:
+        min: 25000
+        max: 85000
+        note: "Two-phase model: Phase 1 (market analysis and scoring,
+               2 weeks) from CHF 20,000. Phase 2 (strategy and partner
+               identification) from CHF 30,000. More affordable than
+               traditional strategy consulting due to data-driven approach."
+
+    sla:
+      response_time: "< 3 business days for proposal"
+      quality_guarantee: |
+        Market model based on verified data sources (Eurostat,
+        national statistics offices, industry associations).
+        Source index delivered with every report.
+
+    confidence_note: |
+      142 completed EU market entry projects over 24 months.
+      Turnaround 40% faster than industry average due to
+      proprietary market model. Strong in Northern Europe
+      (48 projects) and Eastern Europe (31 projects). Limited
+      experience in Southern Europe (Spain, Portugal: 8 projects).
