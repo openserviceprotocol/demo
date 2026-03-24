@@ -1,0 +1,27 @@
+{
+  "name": "osp-demo-agent",
+  "version": "1.0.0",
+  "description": "OSP Demo Agent — AI-powered service provider comparison using Open Service Protocol",
+  "type": "module",
+  "main": "src/backend/server.js",
+  "scripts": {
+    "start": "node src/backend/server.js",
+    "dev:backend": "node --watch src/backend/server.js",
+    "dev:frontend": "cd src/frontend && npm run dev -- --open",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "build": "cd src/frontend && npm run build",
+    "setup": "npm install && cd src/frontend && npm install"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.3.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
